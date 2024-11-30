@@ -1,4 +1,4 @@
--LAB03
+-LAB03_2
 
  **Sử dụng phương thức `addDigitalVideoDisc` với varargs tiện lợi hơn** vì không cần phải tạo một mảng trước khi truyền tham số.
  Điều này giúp mã nguồn trở nên ngắn gọn, dễ đọc và thuận tiện khi số lượng đối tượng cần xử lý không cố định.
