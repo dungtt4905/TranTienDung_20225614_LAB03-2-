@@ -1,14 +1,22 @@
 public class DigitalVideoDisc {
-    private String id;
+    // Class (static) variable
+    private static int nbDigitalVideoDiscs = 0;
+
+    // Instance variables
+    private int id; // Unique ID for each DVD
     private String title;
     private String category;
     private String director;
     private int length;
     private double cost;
 
-    // Constructors
-    public DigitalVideoDisc(String id, String title, String category, String director, int length, double cost) {
-        this.id = id;
+    // Constructor
+    public DigitalVideoDisc(String title, String category, String director, int length, double cost) {
+        // Update the class variable and assign a unique ID
+        nbDigitalVideoDiscs++;
+        this.id = nbDigitalVideoDiscs;
+
+        // Initialize instance variables
         this.title = title;
         this.category = category;
         this.director = director;
@@ -17,7 +25,7 @@ public class DigitalVideoDisc {
     }
 
     // Getters
-    public String getId() {
+    public int getId() {
         return id;
     }
 
@@ -39,6 +47,11 @@ public class DigitalVideoDisc {
 
     public double getCost() {
         return cost;
+    }
+
+    // Static method to get the current count of DVDs
+    public static int getNbDigitalVideoDiscs() {
+        return nbDigitalVideoDiscs;
     }
 
     // toString to display DVD information
